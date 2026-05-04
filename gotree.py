@@ -161,7 +161,7 @@ def main():
 
     try:
         tree = parse_gotree_tree(file_name)
-        print("\nParsed C Tree:")
+        print("\nParsed go Tree:")
         print(tree)
     except FileNotFoundError:
         print(f"Error: The file '{file_name}' was not found.")
