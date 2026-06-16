@@ -4,9 +4,9 @@ mkdir -p CD_root/images
 mkdir -p CD_root/kernel
 cp isolinux.bin CD_root/isolinux/isolinux.bin
 cp isolinux.cfg CD_root/isolinux/isolinux.cfg
-bcc -c -Md libdos.c -o libdos.a
-bcc -x -i -L -3 -Md color.c -o color.c32
-
+bcc -ansi -c -3 -Md libdos.c -o libdos.a
+bcc -ansi -x -i -L -3 -Md color.c -o color.c32
+bcc -ansi -x -i -L -3 -Md intro.c -o intro.c32
 cp *.bss CD_root/isolinux/
 cp *.sys CD_root/isolinux/
 cp *.c32 CD_root/isolinux/
